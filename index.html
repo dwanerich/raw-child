@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAW CHXLD Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <a href="#hero" onclick="toggleMenu()">Home</a>
+            <a href="#pillars" onclick="toggleMenu()">Pillars</a>
+            <a href="#join" onclick="toggleMenu()">Join</a>
+        </div>
+    </nav>
+    <div id="overlay" onclick="closeMenu()"></div>
+
+    <header id="hero">
+        <img src="assets/logo.png" alt="RAW CHXLD Logo" class="logo">
+        <h1>RAW CHXLD COMPANY</h1>
+        <p class="tagline">From Streets to Sovereignty — Building the Future in Real Time</p>
+        <div class="buttons">
+            <button onclick="scrollToSection('pillars')">Enter Movement</button>
+            <button onclick="watchVision()">Watch the Vision</button>
+        </div>
+    </header>
+    <section id="pillars">
+        <h2>The Pillars of RAW CHXLD</h2>
+        <div class="pillar-grid">
+            <div class="pillar"><h3>Music Direction</h3><p>Behind-the-scenes sonic leadership</p></div>
+            <div class="pillar"><h3>Performing Arts</h3><p>Youth & Teen Performing Arts Group</p></div>
+            <div class="pillar"><h3>Athletic Uplift</h3><p>Hempstead Rising Stars Basketball</p></div>
+            <div class="pillar"><h3>Civic & Cultural Impact</h3><p>Partnerships, Scholarships, Community Projects</p></div>
+        </div>
+    </section>
+    <section id="join">
+        <button class="cta">Join the Company</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
