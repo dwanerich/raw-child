@@ -91,7 +91,7 @@ h1 {
 }
 
 .portfolio-tile:hover {
-  background-color: #fff8e1;
+  background-color: #121211;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   transform: translateY(-5px);
 }
