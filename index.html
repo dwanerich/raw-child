@@ -9,19 +9,21 @@
 </head>
 <body>
     <nav>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="nav-menu" id="navMenu">
-            <a href="#hero" onclick="toggleMenu()">Home</a>
-            <a href="#pillars" onclick="toggleMenu()">Pillars</a>
-            <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
-            <a href="#join" onclick="toggleMenu()">Join</a>
-        </div>
-    </nav>
-    <div id="overlay" onclick="closeMenu()"></div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="nav-menu" id="navMenu">
+    <a href="#hero" onclick="toggleMenu()">Home</a>
+    <a href="#pillars" onclick="toggleMenu()">Pillars</a>
+    <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+    <a href="#vision" onclick="toggleMenu()">Featured</a>
+    <a href="#join" onclick="toggleMenu()">Join</a>
+  </div>
+</nav>
+<div id="overlay" onclick="closeMenu()"></div>
+
 
     <header id="hero">
         <img src="assets/logo.png" alt="RAW CHXLD Logo" class="logo">
@@ -66,6 +68,19 @@
             </div>
         </div>
     </section>
+
+    <!-- Featured Vision Section -->
+<section id="vision">
+  <h2 class="highlight-title">FEATURED VISION</h2>
+  <p class="highlight-sub">From Court to Culture</p>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/aPNiqgi-DLs"
+            title="NY Knicks Promo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+  </div>
+</section>
     <section id="join">
         <button class="cta">Join the Company</button>
     </section>
