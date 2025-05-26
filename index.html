@@ -2,88 +2,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RAW CHXLD Company</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAW CHXLD Company</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <a href="#hero" onclick="toggleMenu()">Home</a>
+            <a href="#pillars" onclick="toggleMenu()">Pillars</a>
+            <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+            <a href="#join" onclick="toggleMenu()">Join</a>
+        </div>
+    </nav>
+    <div id="overlay" onclick="closeMenu()"></div>
 
-  <nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div><div></div><div></div>
-    </div>
-    <div class="nav-menu" id="navMenu">
-      <a href="#hero" onclick="toggleMenu()">Home</a>
-      <a href="#pillars" onclick="toggleMenu()">Pillars</a>
-      <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
-      <a href="#vision" onclick="toggleMenu()">Featured</a>
-      <a href="#join" onclick="toggleMenu()">Join</a>
-    </div>
-  </nav>
-  <div id="overlay" onclick="closeMenu()"></div>
-
-  <header id="hero">
-    <img src="assets/raw-chxld-logo.png" alt="RAW CHXLD Logo" class="logo" />
-    <h1>RAW CHXLD COMPANY</h1>
-    <p class="tagline">From Streets to Sovereignty — Building the Future in Real Time</p>
-    <div class="buttons">
-      <button onclick="scrollToSection('pillars')">Enter Movement</button>
-      <button onclick="scrollToSection('vision')">Watch the Vision</button>
-    </div>
-  </header>
-
-  <section id="pillars">
-    <h2>The Pillars of RAW CHXLD</h2>
-    <div class="pillar-grid">
-      <div class="pillar"><h3>Music Production</h3><p>Multi-Platinum Level Studio Infrastructure</p></div>
-      <div class="pillar"><h3>Artist Development</h3><p>Strategic Coaching, Writing & Branding</p></div>
-      <div class="pillar"><h3>Sync Brief Execution</h3><p>Film, TV & Brand Sound Design</p></div>
-      <div class="pillar"><h3>Sports Mentorship</h3><p>Pipeline Guidance for Rising Athletes</p></div>
-    </div>
-  </section>
-
-  <section id="portfolio">
-    <h2>Our Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item"><img src="assets/portfolio-producer.png"><div class="overlay">Multi-Platinum Producer</div></div>
-      <div class="portfolio-item"><img src="assets/portfolio-engineer.png"><div class="overlay">Audio Engineer</div></div>
-      <div class="portfolio-item"><img src="assets/portfolio-artist-dev.png"><div class="overlay">Artist Development</div></div>
-      <div class="portfolio-item"><img src="assets/portfolio-sync.png"><div class="overlay">Sync Licensing</div></div>
-      <div class="portfolio-item"><img src="assets/portfolio-sports.png"><div class="overlay">Sports Mentorship</div></div>
-    </div>
-  </section>
-
-  <section id="vision">
-    <h2 class="highlight-title">FEATURED VISION</h2>
-    <p class="highlight-sub">From Court to Culture</p>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/aPNiqgi-DLs"
-              title="NY Knicks Promo"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section id="join">
-    <button class="cta">Join the Company</button>
-  </section>
-
-  <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-    function toggleMenu() {
-      const nav = document.getElementById('navMenu');
-      const overlay = document.getElementById('overlay');
-      nav.classList.toggle('show');
-      overlay.classList.toggle('active');
-    }
-    function closeMenu() {
-      document.getElementById('navMenu').classList.remove('show');
-      document.getElementById('overlay').classList.remove('active');
-    }
-  </script>
+    <header id="hero">
+        <img src="assets/logo.png" alt="RAW CHXLD Logo" class="logo">
+        <h1>RAW CHXLD COMPANY</h1>
+        <p class="tagline">From Streets to Sovereignty — Building the Future in Real Time</p>
+        <div class="buttons">
+            <button onclick="scrollToSection('pillars')">Enter Movement</button>
+            <button onclick="watchVision()">Watch the Vision</button>
+        </div>
+    </header>
+    <section id="pillars">
+        <h2>The Pillars of RAW CHXLD</h2>
+        <div class="pillar-grid">
+            <div class="pillar"><h3>Music Production</h3><p>Multi-Platinum Level Studio Infrastructure</p></div>
+            <div class="pillar"><h3>Artist Development</h3><p>Strategic Coaching, Writing & Branding</p></div>
+            <div class="pillar"><h3>Sync Brief Execution</h3><p>Film, TV & Brand Sound Design</p></div>
+            <div class="pillar"><h3>Sports Mentorship</h3><p>Pipeline Guidance for Rising Athletes</p></div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="assets/portfolio-producer.png" alt="Producer Logo">
+                <div class="overlay">Multi-Platinum Producer</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/portfolio-engineer.png" alt="Engineer Logo">
+                <div class="overlay">Audio Engineer</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/portfolio-artist-dev.png" alt="Artist Dev">
+                <div class="overlay">Artist Development</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/portfolio-sync.png" alt="Sync Licensing">
+                <div class="overlay">Sync Licensing</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/portfolio-sports.png" alt="Sports Mentorship">
+                <div class="overlay">Sports Mentorship</div>
+            </div>
+        </div>
+    </section>
+    <section id="join">
+        <button class="cta">Join the Company</button>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
